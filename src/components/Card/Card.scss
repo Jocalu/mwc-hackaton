@@ -6,11 +6,11 @@
     cursor: pointer;
     display: flex;
     flex-direction: row;
-    border-radius: rem(4px);
-    box-shadow: 4px 2px 20px -5px rgba(0, 0, 0, 0.2);
+    border-radius: rem(6px);
     border: 1px solid transparent;
     height: rem(100px);
     text-align: start;
+    max-width: rem(360px);
 
     &:hover,
     &:active {
@@ -53,7 +53,6 @@
 
   &__description {
     margin-top: rem(5px);
-    font-size: rem(14px);
   }
 
   &__arrow {

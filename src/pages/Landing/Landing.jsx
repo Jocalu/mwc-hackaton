@@ -22,15 +22,17 @@ const {
 function Landing() {
   return (
     <main className="landing">
-      <header className="landing__log-in--tablet landing__log-in--tablet">
-        <p className="landing__log-in-text grey-text">
+
+      <header className="landing__log-in--tablet">
+        <p className="landing__log-in-text grey mt-8">
           {account}
           <span className="landing__log-in-text--green ml-1">{logIn}</span>
         </p>
       </header>
+
       <section className="landing__wrapper">
         <h2 className="landing__title">{joinCommunity}</h2>
-        <p className="grey-text">{toGetStarted}</p>
+        <p className="grey">{toGetStarted}</p>
         <Link style={{ textDecoration: 'none', color: 'inherit' }} to="/register">
           <Card
             title={developers}
@@ -50,8 +52,9 @@ function Landing() {
           />
         </Link>
       </section>
+
       <section className="landing__log-in landing__log-in--mobile">
-        <p className="landing__log-in-text grey-text">
+        <p className="landing__log-in-text grey">
           {account}
           <span className="landing__log-in-text--green ml-1">{logIn}</span>
         </p>

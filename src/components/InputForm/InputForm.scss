@@ -1,4 +1,30 @@
 @import "../../assets/scss/styles";
 
-.input {
+.input-form {
+  width: 100%;
+
+  .input {
+    all: unset;
+    border-radius: rem(6px);
+    border: 1px solid get-color("grey");
+    padding: rem(10px);
+    width: 100%;
+    height: rem(46px);
+    text-indent: rem(12px);
+    cursor: pointer;
+    font-size: rem(12px);
+    color: get-color("light-grey");
+    box-sizing: border-box;
+
+    &:hover {
+      border: 1px solid get-color("green");
+      box-shadow: 4px 2px 20px -5px rgba(0, 0, 0, 0.2);
+    }
+
+    &__message {
+      margin-top: rem(5px);
+      font-size: rem(12px);
+      color: get-color("red");
+    }
+  }
 }

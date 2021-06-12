@@ -8,15 +8,16 @@ function InputForm({
   const valid = 'valid';
 
   return (
-    <main className="input grey-text">
+    <main className="input-form">
+      <p className="mb-2">{title}</p>
       <label htmlFor={title}>
         <input
-          className={`input--${valid}`}
+          className={`input input--${valid}`}
           name={title}
           placeholder={placeholder}
           valid={valid}
         />
-        <p className={valid}>{`${title} incorrecto`}</p>
+        <p className={`input__message input--${valid}`}>{`${title} incorrecto`}</p>
       </label>
     </main>
 

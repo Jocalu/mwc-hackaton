@@ -8,7 +8,7 @@ function Header({
   back, step, stepNumber, headerTitle, link,
 }) {
   return (
-    <main className="header grey-text">
+    <main className="header grey small">
       <Link style={{ textDecoration: 'none', color: 'inherit' }} to={link} className="header__back display-center">
         <img src={arrowIcon} alt="arrow left" />
         <span className="header__back-text">

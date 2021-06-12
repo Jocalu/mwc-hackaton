@@ -12,13 +12,14 @@
   "personalInfo": "Personal Info.",
   "step": "Paso",
   "registerTitle": "Registra tu cuenta individual",
-  "fullName": "Nombre completo*",
+  "fullName": "Nombre completo",
   "fullNamePlaceholder": "Introduce el nombre completo",
-  "emailAddress": "Dirección de email*",
-  "emailAddressPlaceholder": "Introduce la dirección de email*",
+  "emailAddress": "Correo electrónico",
+  "emailAddressPlaceholder": "Introduce el correo electrónico",
   "password": "Contraseña",
   "passwordPlaceholder": "Introduce la contraseña",
   "acceptTerms": "Acepto los términos y condiciones",
   "registerAccount": "Registrar cuenta",
-  "registerGoogle": "Regístrate con Google"
+  "registerGoogle": "Regístrate con Google",
+  "registerText": "Para poder revisar que se trata de una cuenta real, necesitamos la siguiente información"
 }

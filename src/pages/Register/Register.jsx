@@ -1,7 +1,10 @@
 import React from 'react';
 import './Register.scss';
+import { Link } from 'react-router-dom';
 import constants from '../../constants/constants.json';
 import Header from '../../components/Header/Header';
+import InputForm from '../../components/InputForm/InputForm';
+import googleIcon from '../../assets/icons/google.png';
 
 const {
   back,
@@ -17,6 +20,7 @@ const {
   acceptTerms,
   registerAccount,
   registerGoogle,
+  registerText,
 } = constants;
 
 function Register() {
@@ -29,25 +33,35 @@ function Register() {
         stepNumber="01/03"
         headerTitle={personalInfo}
       />
-      <section>
+      <section className="register__wrapper">
         <h3>{registerTitle}</h3>
-        <p>{fullName}</p>
-        <input type="text" placeholder={fullNamePlaceholder} />
 
-        <p>{emailAddress}</p>
-        <input type="text" placeholder={emailAddressPlaceholder} />
+        <p className="register__text grey">{registerText}</p>
 
-        <p>{password}</p>
-        <input type="text" placeholder={passwordPlaceholder} />
+        <InputForm title={fullName} placeholder={fullNamePlaceholder} />
 
-        <div>
-          <input type="checkbox" />
-          <p>{acceptTerms}</p>
+        <InputForm title={emailAddress} placeholder={emailAddressPlaceholder} />
+
+        <InputForm title={password} placeholder={passwordPlaceholder} />
+
+        <div className="register__terms mb-6">
+          <input className="register__terms-checkbox" type="checkbox" />
+          <span className="ml-3 ">{acceptTerms}</span>
         </div>
 
-        <button type="button">{registerAccount}</button>
+        <Link style={{ textDecoration: 'none', color: 'inherit' }} to="/register">
+          <button className="button button--green" type="button">{registerAccount}</button>
+        </Link>
+
         <hr />
-        <button type="button">{registerGoogle}</button>
+
+        <Link style={{ textDecoration: 'none', color: 'inherit' }} to="/register">
+          <button className="button" type="button">
+            <img className="register__google-icon mr-2" src={googleIcon} alt="google" />
+            {registerGoogle}
+          </button>
+        </Link>
+
       </section>
     </main>
   );

@@ -11,7 +11,7 @@ function Card({
   polygonIcon,
 }) {
   return (
-    <main className="card">
+    <main className="card shadow">
       <div className="card__wrapper">
         <div className="card__icon-wrapper display-center">
           <img className="card__icon" src={polygonIcon} alt={iconName} />
@@ -21,7 +21,7 @@ function Card({
           <h4 className="card__title">
             {title}
           </h4>
-          <p className="card__description grey-text">{description}</p>
+          <p className="card__description grey small">{description}</p>
         </div>
         <div className="card__arrow display-center">
           <img src={arrowIcon} alt="arrow right" />
