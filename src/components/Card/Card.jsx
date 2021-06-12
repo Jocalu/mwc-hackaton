@@ -2,16 +2,19 @@ import React from 'react';
 import './Card.scss';
 import { PropTypes } from 'prop-types';
 import arrowIcon from '../../assets/icons/arrow-right.png';
-import polygonFillIcon from '../../assets/icons/polygon-fill.png';
 
 function Card({
-  title, description, icon, iconName,
+  title,
+  description,
+  icon,
+  iconName,
+  polygonIcon,
 }) {
   return (
     <main className="card">
       <div className="card__wrapper">
         <div className="card__icon-wrapper display-center">
-          <img className="card__icon" src={polygonFillIcon} alt="user icon" />
+          <img className="card__icon" src={polygonIcon} alt={iconName} />
           <img className="card__icon--absolute" src={icon} alt={iconName} />
         </div>
         <div className="card__content">

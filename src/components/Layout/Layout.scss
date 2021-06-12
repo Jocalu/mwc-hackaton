@@ -6,35 +6,49 @@
   height: 100vh;
 
   &__figure {
-    background: get-color("green");
-    height: 100vh;
-    width: 45%;
+    display: none;
+
+    @include for-tablet-portrait-up {
+      display: flex;
+      background: get-color("green");
+      height: 100vh;
+      width: 45%;
+    }
   }
 
   &__text {
-    position: relative;
-    margin: auto;
-    padding: 0 rem(80px);
-    line-height: rem(40px);
-    color: get-color("white");
-    font-weight: 300;
+    display: none;
 
-    &::before {
-      content: url(../../assets/icons/quotation-marks.png);
-      position: absolute;
-      top: rem(-70px);
-    }
+    @include for-tablet-portrait-up {
+      display: flex;
+      position: relative;
+      margin: auto;
+      padding: 0 rem(80px);
+      line-height: rem(40px);
+      color: get-color("white");
+      font-weight: 300;
 
-    &::after {
-      content: url(../../assets/icons/vector.png);
-      position: absolute;
-      bottom: rem(-70px);
-      right: rem(100px);
+      &::before {
+        content: url(../../assets/icons/quotation-marks.png);
+        position: absolute;
+        top: rem(-70px);
+      }
+
+      &::after {
+        content: url(../../assets/icons/vector.png);
+        position: absolute;
+        bottom: rem(-70px);
+        right: rem(100px);
+      }
     }
   }
 
   &__content {
-    width: 55%;
-    padding: rem(40px) rem(60px);
+    width: 100%;
+
+    @include for-tablet-portrait-up {
+      width: 55%;
+      padding: rem(40px) rem(60px);
+    }
   }
 }
