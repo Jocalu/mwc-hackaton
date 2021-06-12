@@ -1,1 +1,16 @@
 @import "./normalize.scss";
+@import "./fonts.scss";
+@import "./colors";
+@import "./functions";
+
+* {
+  font-family: $font-primary;
+  font-weight: 300px;
+}
+
+.display-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-self: center;
+}
