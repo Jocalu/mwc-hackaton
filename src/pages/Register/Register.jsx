@@ -1,10 +1,10 @@
 import React from 'react';
 import './Register.scss';
 import constants from '../../constants/constants.json';
-import arrowIcon from '../../assets/icons/arrow-left.png';
+import Header from '../../components/Header/Header';
 
 const {
-  returnText,
+  back,
   personalInfo,
   step,
   registerTitle,
@@ -22,16 +22,12 @@ const {
 function Register() {
   return (
     <main className="register">
-      <header>
-        <div>
-          <img src={arrowIcon} alt="arrow left" />
-          <span>{returnText}</span>
-        </div>
-        <div>
-          <p>{`${step} 01/03`}</p>
-          <p>{personalInfo}</p>
-        </div>
-      </header>
+      <Header
+        back={back}
+        step={step}
+        stepNumber="01/03"
+        headerTitle={personalInfo}
+      />
       <section>
         <h4>{registerTitle}</h4>
         <p>{fullName}</p>

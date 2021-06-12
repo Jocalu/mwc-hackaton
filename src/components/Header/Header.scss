@@ -1,0 +1,29 @@
+@import "../../assets/scss/styles";
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: rem(14px);
+
+  &__back,
+  &__title {
+    text-align: center;
+    font-weight: 600;
+    margin-top: rem(3px);
+  }
+
+  &__step,
+  &__title {
+    text-align: end;
+    margin-bottom: 0;
+  }
+
+  &__step {
+    text-transform: uppercase;
+  }
+
+  &__back-text {
+    align-self: center;
+  }
+}
