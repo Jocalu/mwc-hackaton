@@ -7,5 +7,18 @@
   "developers": "Developers",
   "developersDesc": "Cuenta personal para entrar en el mundo dev",
   "business": "Business",
-  "businessDesc": "Tienes o perteneces a una compañía"
+  "businessDesc": "Tienes o perteneces a una compañía",
+  "returnText": "Volver",
+  "personalInfo": "Personal Info.",
+  "step": "Paso",
+  "registerTitle": "Registra tu cuenta individual",
+  "fullName": "Nombre completo*",
+  "fullNamePlaceholder": "Introduce el nombre completo",
+  "emailAddress": "Dirección de email*",
+  "emailAddressPlaceholder": "Introduce la dirección de email*",
+  "password": "Contraseña",
+  "passwordPlaceholder": "Introduce la contraseña",
+  "acceptTerms": "Acepto los términos y condiciones",
+  "registerAccount": "Registrar cuenta",
+  "registerGoogle": "Regístrate con Google"
 }

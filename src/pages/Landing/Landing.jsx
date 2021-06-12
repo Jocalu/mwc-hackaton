@@ -8,7 +8,14 @@ import polygonIcon from '../../assets/icons/polygon.png';
 import polygonFillIcon from '../../assets/icons/polygon-fill.png';
 
 const {
-  account, logIn, joinCommunity, toGetStarted, developers, developersDesc, business, businessDesc,
+  account,
+  logIn,
+  joinCommunity,
+  toGetStarted,
+  developers,
+  developersDesc,
+  business,
+  businessDesc,
 } = constants;
 
 function Landing() {

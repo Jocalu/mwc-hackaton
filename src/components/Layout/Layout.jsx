@@ -1,7 +1,7 @@
 import React from 'react';
 import './Layout.scss';
 import constants from '../../constants/constants.json';
-import Landing from '../../pages/Landing/Landing';
+import Register from '../../pages/Register/Register';
 
 const { nuweDescription } = constants;
 
@@ -12,7 +12,7 @@ function Layout() {
         <p className="layout__text">{nuweDescription}</p>
       </div>
       <div className="layout__content">
-        <Landing />
+        <Register />
       </div>
     </main>
   );
