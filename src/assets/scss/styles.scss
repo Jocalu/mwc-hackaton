@@ -1,7 +1,9 @@
-@import "./normalize.scss";
-@import "./fonts.scss";
 @import "./colors";
+@import "./fonts.scss";
 @import "./functions";
+@import "./margin";
+@import "./normalize.scss";
+@import "./padding.scss";
 
 * {
   font-family: $font-primary;
