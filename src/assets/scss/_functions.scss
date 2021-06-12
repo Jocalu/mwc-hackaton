@@ -1,0 +1,7 @@
+@function rem($px: 0) {
+  @return $px / 16px * 1rem;
+}
+
+@function get-color($color: "") {
+  @return map-get($colors, $color);
+}
