@@ -1,17 +1,45 @@
 @import "../../assets/scss/styles";
 
 .landing {
-  &__log-in-text {
-    text-align: end;
+  &__log-in {
+    &-text {
+      text-align: center;
 
-    &--green {
-      color: get-color("green");
-      font-weight: 600;
-      cursor: pointer;
+      @include for-tablet-portrait-up {
+        text-align: end;
+      }
+
+      &--green {
+        color: get-color("green");
+        font-weight: 600;
+        cursor: pointer;
+      }
+    }
+
+    &--mobile {
+      display: block;
+
+      @include for-tablet-portrait-up {
+        display: none;
+      }
+    }
+
+    &--tablet {
+      display: none;
+
+      @include for-tablet-portrait-up {
+        display: block;
+      }
     }
   }
 
   &__wrapper {
-    padding: rem(80px) rem(160px) rem(80px) rem(80px);
+    text-align: center;
+    padding: rem(120px) rem(20px) rem(20px) rem(20px);
+
+    @include for-tablet-portrait-up {
+      text-align: start;
+      padding: rem(80px) rem(160px) rem(80px) rem(80px);
+    }
   }
 }

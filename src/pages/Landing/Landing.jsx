@@ -14,7 +14,7 @@ const {
 function Landing() {
   return (
     <main className="landing">
-      <header>
+      <header className="landing__log-in--tablet landing__log-in--tablet">
         <p className="landing__log-in-text grey-text">
           {account}
           <span className="landing__log-in-text--green ml-1">{logIn}</span>
@@ -37,6 +37,12 @@ function Landing() {
           polygonIcon={polygonIcon}
           iconName="briefcase"
         />
+      </section>
+      <section className="landing__log-in landing__log-in--mobile">
+        <p className="landing__log-in-text grey-text">
+          {account}
+          <span className="landing__log-in-text--green ml-1">{logIn}</span>
+        </p>
       </section>
     </main>
   );

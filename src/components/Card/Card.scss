@@ -10,6 +10,7 @@
     box-shadow: 4px 2px 20px -5px rgba(0, 0, 0, 0.2);
     border: 1px solid transparent;
     height: rem(100px);
+    text-align: start;
 
     &:hover,
     &:active {
@@ -21,7 +22,11 @@
 
   &__icon-wrapper {
     position: relative;
-    width: 20%;
+    width: 25%;
+
+    @include for-tablet-portrait-up {
+      width: 20%;
+    }
   }
 
   &__icon {
@@ -32,7 +37,13 @@
   }
 
   &__content {
-    width: 60%;
+    width: 75%;
+    margin-right: rem(20px);
+
+    @include for-tablet-portrait-up {
+      margin-right: 0;
+      width: 65%;
+    }
   }
 
   &__title {
@@ -46,6 +57,11 @@
   }
 
   &__arrow {
-    width: 20%;
+    display: none;
+
+    @include for-tablet-portrait-up {
+      display: block;
+      width: 15%;
+    }
   }
 }

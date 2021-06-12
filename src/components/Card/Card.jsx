@@ -17,7 +17,7 @@ function Card({
           <img className="card__icon" src={polygonIcon} alt={iconName} />
           <img className="card__icon--absolute" src={icon} alt={iconName} />
         </div>
-        <div className="card__content">
+        <div className="card__content ml-2">
           <h4 className="card__title">
             {title}
           </h4>
