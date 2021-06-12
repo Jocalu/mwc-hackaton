@@ -1,0 +1,51 @@
+@import "../../assets/scss/styles";
+
+.card {
+  &__wrapper {
+    margin: rem(20px) 0;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    border-radius: rem(4px);
+    box-shadow: 4px 2px 20px -5px rgba(0, 0, 0, 0.2);
+    border: 1px solid transparent;
+    height: rem(100px);
+
+    &:hover,
+    &:active {
+      border: 1px solid get-color("dark-green");
+      overflow: hidden;
+      background: get-color("light-blue");
+    }
+  }
+
+  &__icon-wrapper {
+    position: relative;
+    width: 20%;
+  }
+
+  &__icon {
+    &--absolute {
+      position: absolute;
+      top: rem(15px);
+    }
+  }
+
+  &__content {
+    width: 60%;
+  }
+
+  &__title {
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+
+  &__description {
+    margin-top: rem(5px);
+    font-size: rem(14px);
+  }
+
+  &__arrow {
+    width: 20%;
+  }
+}

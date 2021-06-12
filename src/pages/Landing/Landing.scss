@@ -7,10 +7,11 @@
     &--green {
       color: get-color("green");
       font-weight: 600;
+      cursor: pointer;
     }
   }
 
-  &__title {
-    margin-top: rem(80px);
+  &__wrapper {
+    padding: rem(80px) rem(160px) rem(80px) rem(80px);
   }
 }
