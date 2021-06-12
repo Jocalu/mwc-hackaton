@@ -5,5 +5,7 @@
   "joinCommunity": "¡Únete a la comunidad!",
   "toGetStarted": "Para empezar, dinos que cuenta te gustaría abrir",
   "developers": "Developers",
-  "business": "Business"
+  "developersDesc": "Cuenta personal para entrar en el mundo dev",
+  "business": "Business",
+  "businessDesc": "Tienes o perteneces a una compañía"
 }
