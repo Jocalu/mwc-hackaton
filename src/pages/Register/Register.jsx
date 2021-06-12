@@ -23,13 +23,14 @@ function Register() {
   return (
     <main className="register">
       <Header
+        link="/"
         back={back}
         step={step}
         stepNumber="01/03"
         headerTitle={personalInfo}
       />
       <section>
-        <h4>{registerTitle}</h4>
+        <h3>{registerTitle}</h3>
         <p>{fullName}</p>
         <input type="text" placeholder={fullNamePlaceholder} />
 

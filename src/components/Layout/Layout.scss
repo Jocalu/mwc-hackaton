@@ -5,12 +5,17 @@
   flex-direction: row;
   height: 100vh;
 
-  &__figure {
+  &__image {
     display: none;
 
     @include for-tablet-portrait-up {
       display: flex;
-      background: get-color("green");
+      background-image: linear-gradient(
+          get-color("green-opacity"),
+          get-color("green-opacity")
+        ),
+        url(../../assets/img/Background.png);
+      background-size: cover;
       height: 100vh;
       width: 45%;
     }

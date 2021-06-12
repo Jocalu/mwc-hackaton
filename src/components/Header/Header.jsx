@@ -1,20 +1,20 @@
 import React from 'react';
 import './Header.scss';
+import { Link } from 'react-router-dom';
 import { PropTypes } from 'prop-types';
 import arrowIcon from '../../assets/icons/arrow-left.png';
 
 function Header({
-  back, step, stepNumber, headerTitle,
+  back, step, stepNumber, headerTitle, link,
 }) {
   return (
     <main className="header grey-text">
-      <div className="header__back display-center">
+      <Link style={{ textDecoration: 'none', color: 'inherit' }} to={link} className="header__back display-center">
         <img src={arrowIcon} alt="arrow left" />
-        <span>
+        <span className="header__back-text">
           {back}
         </span>
-
-      </div>
+      </Link>
       <div>
         <p className="header__step">{`${step} ${stepNumber}`}</p>
         <p className="header__title">{headerTitle}</p>

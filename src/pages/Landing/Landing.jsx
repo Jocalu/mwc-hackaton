@@ -1,5 +1,6 @@
 import React from 'react';
 import './Landing.scss';
+import { Link } from 'react-router-dom';
 import constants from '../../constants/constants.json';
 import Card from '../../components/Card/Card';
 import userIcon from '../../assets/icons/user.png';
@@ -30,20 +31,24 @@ function Landing() {
       <section className="landing__wrapper">
         <h2 className="landing__title">{joinCommunity}</h2>
         <p className="grey-text">{toGetStarted}</p>
-        <Card
-          title={developers}
-          description={developersDesc}
-          polygonIcon={polygonFillIcon}
-          icon={userIcon}
-          iconName="user"
-        />
-        <Card
-          title={business}
-          description={businessDesc}
-          icon={briefcaseIcon}
-          polygonIcon={polygonIcon}
-          iconName="briefcase"
-        />
+        <Link style={{ textDecoration: 'none', color: 'inherit' }} to="/register">
+          <Card
+            title={developers}
+            description={developersDesc}
+            polygonIcon={polygonFillIcon}
+            icon={userIcon}
+            iconName="user"
+          />
+        </Link>
+        <Link style={{ textDecoration: 'none', color: 'inherit' }} to="/register">
+          <Card
+            title={business}
+            description={businessDesc}
+            icon={briefcaseIcon}
+            polygonIcon={polygonIcon}
+            iconName="briefcase"
+          />
+        </Link>
       </section>
       <section className="landing__log-in landing__log-in--mobile">
         <p className="landing__log-in-text grey-text">
