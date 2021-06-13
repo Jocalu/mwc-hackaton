@@ -57,6 +57,15 @@ body {
   &:hover {
     background-color: get-color("light-blue");
   }
+
+  &:disabled {
+    background-color: get-color("grey");
+    cursor: not-allowed;
+
+    &:hover {
+      background-color: get-color("grey");
+    }
+  }
 }
 
 .button--green {
