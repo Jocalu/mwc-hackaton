@@ -27,3 +27,7 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ![Landing](public/landing.png)
 ![Register](public/register.png)
+![Modal](public/modalregister.png)
+![Profile](public/profile.png)
+![Payment Details](public/paymentdetails.png)
+![Modal](public/modalpayments.png)
