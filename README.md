@@ -2,7 +2,7 @@
 
 This project was created with [React].
 
-## Host
+## Hosting
 
 You can see the page in [https://mwc-hackaton.vercel.app/](https://mwc-hackaton.vercel.app/)
 
@@ -25,4 +25,4 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ## Project images
 
-
+![Scrrenshot](src/assets/img/Background.png)
