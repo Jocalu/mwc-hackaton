@@ -101,7 +101,7 @@ function Register() {
         />
 
         <div className="register__terms mb-6 mt-6">
-          <input className="register__terms-checkbox" type="checkbox" checked />
+          <input className="register__terms-checkbox" type="checkbox" />
           <span className="ml-3 ">{acceptTerms}</span>
         </div>
 
