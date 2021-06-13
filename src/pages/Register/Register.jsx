@@ -31,10 +31,11 @@ const {
 } = constants;
 
 function Register() {
+  const unchecked = 'unchecked';
   const [open, setOpen] = useState(false);
-  const [name, setName] = useState({ inputField: '', valid: false, unchecked: false });
-  const [email, setEmail] = useState({ inputField: '', valid: false, unchecked: false });
-  const [password, setPassword] = useState({ inputField: '', valid: false, unchecked: false });
+  const [name, setName] = useState({ inputField: '', valid: unchecked });
+  const [email, setEmail] = useState({ inputField: '', valid: unchecked });
+  const [password, setPassword] = useState({ inputField: '', valid: unchecked });
 
   const regex = {
     name: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
@@ -103,9 +104,9 @@ function Register() {
         <Link style={{ textDecoration: 'none', color: 'inherit' }} to="/profile">
           <button
             disabled={
-              name.valid !== true
-            || email.valid !== true
-            || password.valid !== true
+              name.valid.toString() !== 'checked'
+            || email.valid.toString() !== 'checked'
+            || password.valid.toString() !== 'checked'
             }
             className="button button--green"
             type="button"

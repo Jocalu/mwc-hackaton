@@ -28,9 +28,10 @@ const {
 } = constants;
 
 function PaymentDetails() {
+  const unchecked = 'unchecked';
   const [open, setOpen] = useState(false);
-  const [cardNumber, setCardNumber] = useState({ inputField: '', valid: false, unchecked: false });
-  const [secretNumber, setSecretNumber] = useState({ inputField: '', valid: false, unchecked: false });
+  const [cardNumber, setCardNumber] = useState({ inputField: '', valid: unchecked });
+  const [secretNumber, setSecretNumber] = useState({ inputField: '', valid: unchecked });
 
   const regex = {
     cardNumber: /^[0-9]{16}$/,
@@ -88,8 +89,8 @@ function PaymentDetails() {
             className="button button--green button--mt"
             type="button"
             disabled={
-              secretNumber.valid !== true
-            || cardNumber.valid !== true
+              secretNumber.valid.toString() !== 'checked'
+            || cardNumber.valid.toString() !== 'checked'
             }
             onClick={() => setOpen(true)}
           >

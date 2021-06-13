@@ -18,9 +18,9 @@ function InputForm({
   const validation = () => {
     if (
       regex.test(state.inputField)) {
-      setState({ ...state, valid: true, unchecked: true });
+      setState({ ...state, valid: 'checked' });
     } else {
-      setState({ ...state, valid: false, unchecked: true });
+      setState({ ...state, valid: 'error' });
     }
   };
 
@@ -40,7 +40,7 @@ function InputForm({
           placeholder={placeholder}
           valid={state.valid}
         />
-        {(!state.valid && state.unchecked)
+        {state.valid === 'error'
           ? <p className="input__message">{errorText}</p>
           : <p className="input__message" />}
       </label>
@@ -59,7 +59,7 @@ InputForm.propTypes = {
   regex: PropTypes.string,
   state: PropTypes.shape({
     inputField: PropTypes.string.isRequired,
-    valid: PropTypes.bool.isRequired,
+    valid: PropTypes.string.isRequired,
   }).isRequired,
   setState: PropTypes.func.isRequired,
 }.isRequired;

@@ -25,9 +25,10 @@ const {
 } = constants;
 
 function Profile() {
-  const [phoneNumber, setPhoneNumber] = useState({ inputField: '', valid: false, unchecked: false });
-  const [address, setAddress] = useState({ inputField: '', valid: false, unchecked: false });
-  const [country, setCountry] = useState({ inputField: '', valid: false, unchecked: false });
+  const unchecked = 'unchecked';
+  const [phoneNumber, setPhoneNumber] = useState({ inputField: '', valid: false });
+  const [address, setAddress] = useState({ inputField: '', valid: unchecked });
+  const [country, setCountry] = useState({ inputField: '', valid: unchecked });
 
   const regex = {
     address: /^[a-zA-ZÀ-ÿ0-9\s]{1,40}$/,
@@ -90,9 +91,9 @@ function Profile() {
             className="button button--green button--mt"
             type="button"
             disabled={
-              phoneNumber.valid !== true
-            || address.valid !== true
-            || country.valid !== true
+              phoneNumber.valid.toString() !== 'checked'
+            || address.valid.toString() !== 'checked'
+            || country.valid.toString() !== 'checked'
             }
           >
             {save}
