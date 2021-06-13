@@ -9,7 +9,6 @@
       transform: translateY(0%);
     }
   }
-
   display: flex;
   position: fixed;
   top: 0;
@@ -31,13 +30,13 @@
 
   &__window {
     position: relative;
-    border-radius: rem(20px);
     background: get-color("white");
-    width: rem(725px);
+    width: auto;
     height: 100vh;
     padding: 0 rem(20px);
 
     @include for-tablet-portrait-up {
+      border-radius: rem(20px);
       height: auto;
     }
   }
@@ -59,6 +58,12 @@
 
   &__text {
     line-height: rem(30px);
+    max-width: rem(500px);
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: row;
   }
 
   .slide-fade {

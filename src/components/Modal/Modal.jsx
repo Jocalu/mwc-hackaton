@@ -8,29 +8,36 @@ function Modal({
   textbutton,
   textbutton2,
   open,
+  setOpen,
 }) {
   return (
-    <main className="modal modal--displayed">
+    <main className={`modal ${open ? 'modal--displayed' : ''}`}>
       {open
       && (
-      <div className="modal__window">
+      <div className="modal__window slide-fade">
         <div className="modal__wrapper p-6 pt-4 pb-4">
           <h4 className="modal__title mt-8">{title}</h4>
           <p className="modal__text">{text}</p>
-          <button
-            className="button button--border button--small button--mt"
-            type="button"
-          >
-            {textbutton}
-          </button>
-          {textbutton2 && (
-          <button
-            className="button button--black button--mid button--mt"
-            type="button"
-          >
-            {textbutton2}
-          </button>
-          )}
+
+          <div className="modal__buttons">
+            <button
+              className="button button--border button--small button--mt"
+              type="button"
+              onClick={() => { setOpen(false); }}
+            >
+              {textbutton}
+            </button>
+            {textbutton2 && (
+            <button
+              className="button button--black button--mid button--mt button--ml"
+              type="button"
+              onClick={() => { setOpen(false); }}
+            >
+              {textbutton2}
+            </button>
+            )}
+          </div>
+
         </div>
       </div>
       )}
@@ -46,4 +53,5 @@ Modal.propTypes = {
   textbutton: PropTypes.string,
   textbutton2: PropTypes.string,
   open: PropTypes.bool.isRequired,
+  setOpen: PropTypes.func.isRequired,
 }.isRequired;

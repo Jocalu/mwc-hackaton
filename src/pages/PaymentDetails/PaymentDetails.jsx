@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './PaymentDetails.scss';
 import { Link } from 'react-router-dom';
 import constants from '../../constants/constants.json';
 import Header from '../../components/Header/Header';
 import InputForm from '../../components/InputForm/InputForm';
 import padlockIcon from '../../assets/icons/padlock.png';
+import Modal from '../../components/Modal/Modal';
 
 const {
   back,
@@ -18,11 +19,26 @@ const {
   secretNumberPlaceholder,
   createAccount,
   safeInformation,
+  itsFine,
+  createdCorrectly,
+  closeText,
+  goNuwe,
 } = constants;
 
 function PaymentDetails() {
+  const [open, setOpen] = useState(false);
+
   return (
     <main className="payment-details">
+      <Modal
+        title={itsFine}
+        text={createdCorrectly}
+        textbutton={closeText}
+        textbutton2={goNuwe}
+        open={open}
+        setOpen={setOpen}
+      />
+
       <Header
         link="/profile"
         back={back}
@@ -43,7 +59,13 @@ function PaymentDetails() {
           style={{ textDecoration: 'none', color: 'inherit' }}
           to="/payment-details"
         >
-          <button className="button button--green button--mt" type="button">{createAccount}</button>
+          <button
+            className="button button--green button--mt"
+            type="button"
+            onClick={() => setOpen(true)}
+          >
+            {createAccount}
+          </button>
         </Link>
 
         <span

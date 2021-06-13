@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Register.scss';
 import { Link } from 'react-router-dom';
 import constants from '../../constants/constants.json';
@@ -28,14 +28,18 @@ const {
 } = constants;
 
 function Register() {
+  const [open, setOpen] = useState(false);
+
   return (
     <main className="register">
       <Modal
         title={somethingWrong}
         text={mailUsed}
         textbutton={closeText}
-        open
+        open={open}
+        setOpen={setOpen}
       />
+
       <Header
         link="/"
         back={back}
@@ -60,13 +64,23 @@ function Register() {
         </div>
 
         <Link style={{ textDecoration: 'none', color: 'inherit' }} to="/profile">
-          <button className="button button--green" type="button">{registerAccount}</button>
+          <button
+            className="button button--green"
+            type="button"
+            onClick={() => setOpen(true)}
+          >
+            {registerAccount}
+          </button>
         </Link>
 
         <hr />
 
         <Link style={{ textDecoration: 'none', color: 'inherit' }} to="/profile">
-          <button className="button" type="button">
+          <button
+            className="button"
+            type="button"
+            onClick={() => setOpen(true)}
+          >
             <img className="register__google-icon mr-2" src={googleIcon} alt="google" />
             {registerGoogle}
           </button>

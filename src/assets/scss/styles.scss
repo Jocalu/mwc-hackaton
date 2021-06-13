@@ -72,6 +72,10 @@ body {
   margin-top: rem(30px);
 }
 
+.button--ml {
+  margin-left: rem(10px);
+}
+
 .button--border {
   border: 1px solid get-color("black");
 }
@@ -81,15 +85,24 @@ body {
   color: get-color("white");
 
   &:hover {
-    background-color: get-color("white");
+    background-color: get-color("light-blue");
     color: get-color("black");
+    border: 1px solid get-color("black");
   }
 }
 
 .button--small {
   max-width: rem(160px);
+
+  @include for-tablet-portrait-up {
+    min-width: rem(160px);
+  }
 }
 
 .button--mid {
   max-width: rem(240px);
+
+  @include for-tablet-portrait-up {
+    min-width: rem(240px);
+  }
 }
