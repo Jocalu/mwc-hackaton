@@ -31,5 +31,17 @@
   "countryPlaceholder": "Selecciona uno",
   "save": "Guardar y continuar",
   "safeInformation": "Tú información es segura",
-  "location": "Localización"
+  "location": "Localización",
+  "paymentDetailsTitle": "Verifica tu perfil",
+  "paymentDetailsText": "Para poder revisar que se trata de una cuenta real, necesitamos la siguiente información",
+  "verificationCard": "Verificación por tarjeta",
+  "cardNumber": "Número de tarjeta",
+  "secretNumber": "Código secreto",
+  "createAccount": "Crear cuenta",
+  "itsFine": "¡Todo guay!",
+  "createdCorrectly": "Tu cuenta se ha creado correctamente",
+  "close": "Cerrar",
+  "goNuwe": "Vamos para Nuwe",
+  "somethingWrong": "¡Ups, algo ha ido mal",
+  "mailUsed": "Parece que el correo electrónico introducido ya está en uso. Por favor, revísalo y vuelve a intentarlo de nuevo"
 }
