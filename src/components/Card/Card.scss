@@ -1,6 +1,8 @@
 @import "../../assets/scss/styles";
 
 .card {
+  max-width: rem(480px);
+
   &__wrapper {
     margin: rem(20px) 0;
     cursor: pointer;
@@ -10,7 +12,6 @@
     border: 1px solid transparent;
     height: rem(100px);
     text-align: start;
-    max-width: rem(480px);
 
     &:hover,
     &:active {

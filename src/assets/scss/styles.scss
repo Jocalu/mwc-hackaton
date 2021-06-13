@@ -71,3 +71,25 @@ body {
 .button--mt {
   margin-top: rem(30px);
 }
+
+.button--border {
+  border: 1px solid get-color("black");
+}
+
+.button--black {
+  background-color: get-color("black");
+  color: get-color("white");
+
+  &:hover {
+    background-color: get-color("white");
+    color: get-color("black");
+  }
+}
+
+.button--small {
+  max-width: rem(160px);
+}
+
+.button--mid {
+  max-width: rem(240px);
+}

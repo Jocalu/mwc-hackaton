@@ -5,6 +5,7 @@ import constants from '../../constants/constants.json';
 import Header from '../../components/Header/Header';
 import InputForm from '../../components/InputForm/InputForm';
 import googleIcon from '../../assets/icons/google.png';
+import Modal from '../../components/Modal/Modal';
 
 const {
   back,
@@ -21,11 +22,20 @@ const {
   registerAccount,
   registerGoogle,
   registerText,
+  somethingWrong,
+  mailUsed,
+  closeText,
 } = constants;
 
 function Register() {
   return (
     <main className="register">
+      <Modal
+        title={somethingWrong}
+        text={mailUsed}
+        textbutton={closeText}
+        open
+      />
       <Header
         link="/"
         back={back}

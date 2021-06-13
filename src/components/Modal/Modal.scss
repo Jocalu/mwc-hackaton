@@ -1,0 +1,71 @@
+@import "../../assets/scss/styles";
+
+.modal {
+  @keyframes slide-fade-in {
+    0% {
+      transform: translateY(-70%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  transition: all 500ms ease;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100vw;
+  height: 100vh;
+
+  &--displayed {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__window {
+    position: relative;
+    border-radius: rem(20px);
+    background: get-color("white");
+    width: rem(725px);
+    height: 100vh;
+    padding: 0 rem(20px);
+
+    @include for-tablet-portrait-up {
+      height: auto;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include for-tablet-portrait-up {
+      position: relative;
+      justify-content: center;
+    }
+  }
+
+  &__title {
+    font-size: rem(22px);
+  }
+
+  &__text {
+    line-height: rem(30px);
+  }
+
+  .slide-fade {
+    transition: opacity 0.5s;
+
+    @include for-tablet-portrait-up {
+      animation: slide-fade-in 0.5s;
+    }
+  }
+}

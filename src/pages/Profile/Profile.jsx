@@ -44,7 +44,7 @@ function Profile() {
 
         <Link
           style={{ textDecoration: 'none', color: 'inherit' }}
-          to="/profile"
+          to="/payment-details"
 
         >
           <button className="button button--green button--mt" type="button">{save}</button>

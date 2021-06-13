@@ -1,0 +1,32 @@
+@import "../../assets/scss/styles";
+
+.payment-details {
+  &__wrapper {
+    padding: rem(40px) rem(20px);
+
+    @include for-tablet-portrait-up {
+      padding-right: rem(120px);
+    }
+  }
+
+  &__title {
+    font-size: rem(28px);
+    margin-top: 0;
+  }
+
+  &__text {
+    display: block;
+    line-height: rem(26px);
+  }
+
+  &__safe-information {
+    text-align: center;
+    width: 100%;
+    font-size: rem(12px);
+
+    &-icon {
+      height: rem(24px);
+      align-self: center;
+    }
+  }
+}

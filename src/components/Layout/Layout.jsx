@@ -5,6 +5,7 @@ import constants from '../../constants/constants.json';
 import Landing from '../../pages/Landing/Landing';
 import Register from '../../pages/Register/Register';
 import Profile from '../../pages/Profile/Profile';
+import PaymentDetails from '../../pages/PaymentDetails/PaymentDetails';
 
 const { nuweDescription } = constants;
 
@@ -20,6 +21,7 @@ function Layout() {
             <Route exact path="/"><Landing /></Route>
             <Route exact path="/register"><Register /></Route>
             <Route exact path="/profile"><Profile /></Route>
+            <Route exact path="/payment-details"><PaymentDetails /></Route>
           </Switch>
         </Router>
       </div>
