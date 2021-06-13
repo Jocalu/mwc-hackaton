@@ -14,7 +14,6 @@
     cursor: pointer;
     font-size: rem(12px);
     box-sizing: border-box;
-    max-width: rem(480px);
 
     &:hover {
       border: 1px solid get-color("green");

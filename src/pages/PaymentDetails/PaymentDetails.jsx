@@ -13,9 +13,9 @@ const {
   step,
   paymentDetailsTitle,
   paymentDetailsText,
-  cardNumber,
+  cardNumberText,
   cardNumberPlaceholder,
-  secretNumber,
+  secretNumberText,
   secretNumberPlaceholder,
   createAccount,
   safeInformation,
@@ -23,10 +23,19 @@ const {
   createdCorrectly,
   closeText,
   goNuwe,
+  cardNumberTextError,
+  secretNumberTextError,
 } = constants;
 
 function PaymentDetails() {
   const [open, setOpen] = useState(false);
+  const [cardNumber, setCardNumber] = useState({ inputField: '', valid: false, unchecked: false });
+  const [secretNumber, setSecretNumber] = useState({ inputField: '', valid: false, unchecked: false });
+
+  const regex = {
+    cardNumber: /^[0-9]{16}$/,
+    secretNumber: /^[0-9]{3}$/,
+  };
 
   return (
     <main className="payment-details">
@@ -51,9 +60,25 @@ function PaymentDetails() {
 
         <p className="payment-details__text grey">{paymentDetailsText}</p>
 
-        <InputForm title={cardNumber} placeholder={cardNumberPlaceholder} />
+        <InputForm
+          title={cardNumberText}
+          placeholder={cardNumberPlaceholder}
+          type="text"
+          state={cardNumber}
+          setState={setCardNumber}
+          regex={regex.cardNumber}
+          errorText={cardNumberTextError}
+        />
 
-        <InputForm title={secretNumber} placeholder={secretNumberPlaceholder} />
+        <InputForm
+          title={secretNumberText}
+          placeholder={secretNumberPlaceholder}
+          type="text"
+          state={secretNumber}
+          setState={setSecretNumber}
+          regex={regex.secretNumber}
+          errorText={secretNumberTextError}
+        />
 
         <Link
           style={{ textDecoration: 'none', color: 'inherit' }}
@@ -62,6 +87,10 @@ function PaymentDetails() {
           <button
             className="button button--green button--mt"
             type="button"
+            disabled={
+              secretNumber.valid !== true
+            || cardNumber.valid !== true
+            }
             onClick={() => setOpen(true)}
           >
             {createAccount}

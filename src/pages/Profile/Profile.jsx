@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Profile.scss';
 import { Link } from 'react-router-dom';
 import constants from '../../constants/constants.json';
@@ -12,16 +12,29 @@ const {
   step,
   profileTitle,
   profileText,
-  phoneNumber,
-  address,
+  phoneNumberText,
+  addressText,
   addressPlaceholder,
-  country,
+  countryText,
   countryPlaceholder,
   save,
   safeInformation,
+  phoneNumberError,
+  addressTextError,
+  countryTextError,
 } = constants;
 
 function Profile() {
+  const [phoneNumber, setPhoneNumber] = useState({ inputField: '', valid: false, unchecked: false });
+  const [address, setAddress] = useState({ inputField: '', valid: false, unchecked: false });
+  const [country, setCountry] = useState({ inputField: '', valid: false, unchecked: false });
+
+  const regex = {
+    address: /^[a-zA-ZÀ-ÿ0-9\s]{1,40}$/,
+    country: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
+    phoneNumber: /^(\+34|0034|34)?[ -]*(6|7)[ -]*([0-9][ -]*){8}$/,
+  };
+
   return (
     <main className="profile">
       <Header
@@ -36,18 +49,54 @@ function Profile() {
 
         <p className="profile__text grey">{profileText}</p>
 
-        <InputForm title={phoneNumber} />
+        <InputForm
+          title={phoneNumberText}
+          type="text"
+          state={phoneNumber}
+          setState={setPhoneNumber}
+          regex={regex.phoneNumber}
+          errorText={phoneNumberError}
 
-        <InputForm title={address} placeholder={addressPlaceholder} />
+        />
 
-        <InputForm title={country} placeholder={countryPlaceholder} />
+        <InputForm
+          title={addressText}
+          placeholder={addressPlaceholder}
+          type="text"
+          state={address}
+          setState={setAddress}
+          regex={regex.address}
+          errorText={addressTextError}
+
+        />
+
+        <InputForm
+          title={countryText}
+          placeholder={countryPlaceholder}
+          type="text"
+          state={country}
+          setState={setCountry}
+          regex={regex.country}
+          errorText={countryTextError}
+
+        />
 
         <Link
           style={{ textDecoration: 'none', color: 'inherit' }}
           to="/payment-details"
 
         >
-          <button className="button button--green button--mt" type="button">{save}</button>
+          <button
+            className="button button--green button--mt"
+            type="button"
+            disabled={
+              phoneNumber.valid !== true
+            || address.valid !== true
+            || country.valid !== true
+            }
+          >
+            {save}
+          </button>
         </Link>
 
         <span
