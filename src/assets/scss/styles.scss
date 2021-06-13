@@ -12,7 +12,9 @@
 }
 
 body {
-  overflow: hidden;
+  @include for-tablet-portrait-up {
+    overflow: hidden;
+  }
 }
 
 .display-center {
