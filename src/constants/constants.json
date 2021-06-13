@@ -9,7 +9,7 @@
   "business": "Business",
   "businessDesc": "Tienes o perteneces a una compañía",
   "back": "Volver",
-  "personalInfo": "Personal Info.",
+  "personalInfo": "Información personal",
   "step": "Paso",
   "registerTitle": "Registra tu cuenta individual",
   "fullName": "Nombre completo",
@@ -21,5 +21,15 @@
   "acceptTerms": "Acepto los términos y condiciones",
   "registerAccount": "Registrar cuenta",
   "registerGoogle": "Regístrate con Google",
-  "registerText": "Para poder revisar que se trata de una cuenta real, necesitamos la siguiente información"
+  "registerText": "Para poder revisar que se trata de una cuenta real, necesitamos la siguiente información",
+  "profileTitle": "Completa tú perfil",
+  "profileText": "Para poder revisar que se trata de una cuenta real, neceistamos la siguiente información",
+  "phoneNumber": "Número de teléfono",
+  "address": "Dirección",
+  "addressPlaceholder": "Introduce la dirección completa",
+  "country": "País de residencia",
+  "countryPlaceholder": "Selecciona uno",
+  "save": "Guardar y continuar",
+  "safeInformation": "Tú información es segura",
+  "location": "Localización"
 }

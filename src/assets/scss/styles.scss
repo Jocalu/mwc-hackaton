@@ -47,6 +47,7 @@ body {
   position: relative;
   margin-bottom: rem(20px);
   box-sizing: border-box;
+  max-width: rem(480px);
 }
 
 .button {
@@ -65,4 +66,8 @@ body {
   &:hover {
     background-color: get-color("dark-green");
   }
+}
+
+.button--mt {
+  margin-top: rem(30px);
 }

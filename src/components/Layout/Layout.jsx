@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import constants from '../../constants/constants.json';
 import Landing from '../../pages/Landing/Landing';
 import Register from '../../pages/Register/Register';
+import Profile from '../../pages/Profile/Profile';
 
 const { nuweDescription } = constants;
 
@@ -18,6 +19,7 @@ function Layout() {
           <Switch>
             <Route exact path="/"><Landing /></Route>
             <Route exact path="/register"><Register /></Route>
+            <Route exact path="/profile"><Profile /></Route>
           </Switch>
         </Router>
       </div>

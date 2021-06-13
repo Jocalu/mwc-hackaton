@@ -1,12 +1,17 @@
 @import "../../assets/scss/styles";
 
 .register {
-  padding: rem(20px);
-
   &__wrapper {
+    padding: rem(40px) rem(20px);
+
     @include for-tablet-portrait-up {
-      padding: 0 rem(120px) 0 0;
+      padding-right: rem(120px);
     }
+  }
+
+  &__title {
+    font-size: rem(28px);
+    margin-top: 0;
   }
 
   &__text {

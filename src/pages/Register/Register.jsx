@@ -34,7 +34,7 @@ function Register() {
         headerTitle={personalInfo}
       />
       <section className="register__wrapper">
-        <h3>{registerTitle}</h3>
+        <h3 className="register__title">{registerTitle}</h3>
 
         <p className="register__text grey">{registerText}</p>
 
@@ -49,13 +49,13 @@ function Register() {
           <span className="ml-3 ">{acceptTerms}</span>
         </div>
 
-        <Link style={{ textDecoration: 'none', color: 'inherit' }} to="/register">
+        <Link style={{ textDecoration: 'none', color: 'inherit' }} to="/profile">
           <button className="button button--green" type="button">{registerAccount}</button>
         </Link>
 
         <hr />
 
-        <Link style={{ textDecoration: 'none', color: 'inherit' }} to="/register">
+        <Link style={{ textDecoration: 'none', color: 'inherit' }} to="/profile">
           <button className="button" type="button">
             <img className="register__google-icon mr-2" src={googleIcon} alt="google" />
             {registerGoogle}
