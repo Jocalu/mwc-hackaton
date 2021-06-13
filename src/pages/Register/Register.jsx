@@ -40,6 +40,7 @@ function Register() {
   const [name, setName] = useState({ inputField: '', valid: unchecked });
   const [email, setEmail] = useState({ inputField: '', valid: unchecked });
   const [password, setPassword] = useState({ inputField: '', valid: unchecked });
+  const [check, setCheck] = useState(false);
 
   const regex = {
     name: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
@@ -101,7 +102,11 @@ function Register() {
         />
 
         <div className="register__terms mb-6 mt-6">
-          <input className="register__terms-checkbox" type="checkbox" />
+          <input
+            className="register__terms-checkbox"
+            type="checkbox"
+            onClick={() => setCheck(true)}
+          />
           <span className="ml-3 ">{acceptTerms}</span>
         </div>
 
@@ -111,6 +116,7 @@ function Register() {
               name.valid !== 'checked'
             || email.valid !== 'checked'
             || password.valid !== 'checked'
+            || !check
             }
             className="button button--green"
             type="button"
