@@ -1,6 +1,6 @@
 # MWC HACKATON
 
-This project was created with [React].
+This project was created with [React](https://es.reactjs.org/).
 
 ## Hosting
 
