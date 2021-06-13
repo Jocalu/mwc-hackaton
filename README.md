@@ -25,4 +25,5 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ## Project images
 
-![Scrrenshot](src/assets/img/Background.png)
+![Landing](public/landing.png)
+![Register](public/register.png)

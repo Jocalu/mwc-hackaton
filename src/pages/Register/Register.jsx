@@ -32,9 +32,9 @@ const {
 
 function Register() {
   const [open, setOpen] = useState(false);
-  const [name, setName] = useState({ valid: false, unchecked: false });
-  const [email, setEmail] = useState({ valid: false, unchecked: false });
-  const [password, setPassword] = useState({ valid: false, unchecked: false });
+  const [name, setName] = useState({ inputField: '', valid: false, unchecked: false });
+  const [email, setEmail] = useState({ inputField: '', valid: false, unchecked: false });
+  const [password, setPassword] = useState({ inputField: '', valid: false, unchecked: false });
 
   const regex = {
     name: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
