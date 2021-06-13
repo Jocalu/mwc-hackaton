@@ -1,11 +1,14 @@
 import React from 'react';
-import './Layout.scss';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import constants from '../../constants/constants.json';
+
+import './Layout.scss';
+
 import Landing from '../../pages/Landing/Landing';
 import Register from '../../pages/Register/Register';
 import Profile from '../../pages/Profile/Profile';
 import PaymentDetails from '../../pages/PaymentDetails/PaymentDetails';
+
+import constants from '../../constants/constants.json';
 
 const { nuweDescription } = constants;
 

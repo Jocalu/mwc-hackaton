@@ -1,15 +1,16 @@
 import React from 'react';
-import './InputForm.scss';
 import { PropTypes } from 'prop-types';
 
+import './InputForm.scss';
+
 function InputForm({
-  title,
-  placeholder,
-  type,
-  state,
-  setState,
-  regex,
   errorText,
+  placeholder,
+  regex,
+  setState,
+  state,
+  title,
+  type,
 }) {
   const onChange = (event) => {
     setState({ ...state, inputField: event.target.value });

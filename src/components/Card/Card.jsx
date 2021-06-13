@@ -1,14 +1,16 @@
 import React from 'react';
-import './Card.scss';
 import { PropTypes } from 'prop-types';
+
+import './Card.scss';
+
 import arrowIcon from '../../assets/icons/arrow-right.png';
 
 function Card({
-  title,
   description,
   icon,
   iconName,
   polygonIcon,
+  title,
 }) {
   return (
     <main className="card shadow">
@@ -34,7 +36,7 @@ function Card({
 export default Card;
 
 Card.propTypes = {
-  title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   iconName: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
 }.isRequired;

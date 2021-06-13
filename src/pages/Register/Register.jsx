@@ -1,33 +1,37 @@
 import React, { useState } from 'react';
-import './Register.scss';
 import { Link } from 'react-router-dom';
-import constants from '../../constants/constants.json';
+
+import './Register.scss';
+
 import Header from '../../components/Header/Header';
 import InputForm from '../../components/InputForm/InputForm';
-import googleIcon from '../../assets/icons/google.png';
 import Modal from '../../components/Modal/Modal';
 
+import constants from '../../constants/constants.json';
+
+import googleIcon from '../../assets/icons/google.png';
+
 const {
+  acceptTerms,
   back,
-  personalInfo,
-  step,
-  registerTitle,
-  fullName,
-  fullNameErrorMessage,
-  fullNamePlaceholder,
+  closeText,
   emailAddress,
   emailAddressErrorMessage,
   emailAddressPlaceholder,
+  fullName,
+  fullNameErrorMessage,
+  fullNamePlaceholder,
+  mailUsed,
   passwordErrorMessage,
-  passwordText,
   passwordPlaceholder,
-  acceptTerms,
+  passwordText,
+  personalInfo,
   registerAccount,
   registerGoogle,
   registerText,
+  registerTitle,
   somethingWrong,
-  mailUsed,
-  closeText,
+  step,
 } = constants;
 
 function Register() {
@@ -89,7 +93,7 @@ function Register() {
         <InputForm
           title={passwordText}
           placeholder={passwordPlaceholder}
-          type="text"
+          type="password"
           state={password}
           setState={setPassword}
           regex={regex.password}
@@ -97,7 +101,7 @@ function Register() {
         />
 
         <div className="register__terms mb-6 mt-6">
-          <input className="register__terms-checkbox" type="checkbox" />
+          <input className="register__terms-checkbox" type="checkbox" checked />
           <span className="ml-3 ">{acceptTerms}</span>
         </div>
 

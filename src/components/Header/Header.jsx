@@ -1,7 +1,9 @@
 import React from 'react';
-import './Header.scss';
 import { Link } from 'react-router-dom';
 import { PropTypes } from 'prop-types';
+
+import './Header.scss';
+
 import arrowIcon from '../../assets/icons/arrow-left.png';
 
 function Header({
@@ -27,8 +29,8 @@ function Header({
 export default Header;
 
 Header.propTypes = {
+  headerTitle: PropTypes.string.isRequired,
   returnText: PropTypes.string.isRequired,
   step: PropTypes.string.isRequired,
   stepNumber: PropTypes.string.isRequired,
-  headerTitle: PropTypes.string.isRequired,
 }.isRequired;

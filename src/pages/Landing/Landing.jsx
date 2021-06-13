@@ -1,22 +1,26 @@
 import React from 'react';
-import './Landing.scss';
 import { Link } from 'react-router-dom';
-import constants from '../../constants/constants.json';
+
+import './Landing.scss';
+
 import Card from '../../components/Card/Card';
-import userIcon from '../../assets/icons/user.png';
+
+import constants from '../../constants/constants.json';
+
 import briefcaseIcon from '../../assets/icons/briefcase.png';
+import userIcon from '../../assets/icons/user.png';
 import polygonIcon from '../../assets/icons/polygon.png';
 import polygonFillIcon from '../../assets/icons/polygon-fill.png';
 
 const {
   account,
-  logIn,
-  joinCommunity,
-  toGetStarted,
-  developers,
-  developersDesc,
   business,
   businessDesc,
+  developers,
+  developersDesc,
+  joinCommunity,
+  logIn,
+  toGetStarted,
 } = constants;
 
 function Landing() {
@@ -33,6 +37,7 @@ function Landing() {
       <section className="landing__wrapper">
         <h2 className="landing__title">{joinCommunity}</h2>
         <p className="grey">{toGetStarted}</p>
+
         <Link style={{ textDecoration: 'none', color: 'inherit' }} to="/register">
           <Card
             title={developers}
@@ -42,6 +47,7 @@ function Landing() {
             iconName="user"
           />
         </Link>
+
         <Link style={{ textDecoration: 'none', color: 'inherit' }} to="/register">
           <Card
             title={business}

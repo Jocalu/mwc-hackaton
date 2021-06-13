@@ -1,14 +1,15 @@
 import React from 'react';
-import './Modal.scss';
 import { PropTypes } from 'prop-types';
 
+import './Modal.scss';
+
 function Modal({
-  title,
+  open,
+  setOpen,
   text,
   textbutton,
   textbutton2,
-  open,
-  setOpen,
+  title,
 }) {
   return (
     <main className={`modal ${open ? 'modal--displayed' : ''}`}>
@@ -48,10 +49,10 @@ function Modal({
 export default Modal;
 
 Modal.propTypes = {
-  title: PropTypes.string.isRequired,
+  open: PropTypes.bool.isRequired,
+  setOpen: PropTypes.func.isRequired,
   text: PropTypes.string.isRequired,
   textbutton: PropTypes.string,
   textbutton2: PropTypes.string,
-  open: PropTypes.bool.isRequired,
-  setOpen: PropTypes.func.isRequired,
+  title: PropTypes.string.isRequired,
 }.isRequired;

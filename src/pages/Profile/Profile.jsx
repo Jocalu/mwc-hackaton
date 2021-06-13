@@ -1,27 +1,31 @@
 import React, { useState } from 'react';
-import './Profile.scss';
 import { Link } from 'react-router-dom';
-import constants from '../../constants/constants.json';
+
+import './Profile.scss';
+
 import Header from '../../components/Header/Header';
 import InputForm from '../../components/InputForm/InputForm';
+
+import constants from '../../constants/constants.json';
+
 import padlockIcon from '../../assets/icons/padlock.png';
 
 const {
-  back,
-  location,
-  step,
-  profileTitle,
-  profileText,
-  phoneNumberText,
-  addressText,
   addressPlaceholder,
-  countryText,
-  countryPlaceholder,
-  save,
-  safeInformation,
-  phoneNumberError,
+  addressText,
   addressTextError,
+  back,
+  countryPlaceholder,
+  countryText,
   countryTextError,
+  location,
+  phoneNumberError,
+  phoneNumberText,
+  profileText,
+  profileTitle,
+  safeInformation,
+  save,
+  step,
 } = constants;
 
 function Profile() {

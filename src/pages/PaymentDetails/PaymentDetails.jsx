@@ -1,30 +1,34 @@
 import React, { useState } from 'react';
-import './PaymentDetails.scss';
 import { Link } from 'react-router-dom';
-import constants from '../../constants/constants.json';
+
+import './PaymentDetails.scss';
+
 import Header from '../../components/Header/Header';
 import InputForm from '../../components/InputForm/InputForm';
-import padlockIcon from '../../assets/icons/padlock.png';
 import Modal from '../../components/Modal/Modal';
+
+import constants from '../../constants/constants.json';
+
+import padlockIcon from '../../assets/icons/padlock.png';
 
 const {
   back,
-  verificationCard,
-  step,
-  paymentDetailsTitle,
-  paymentDetailsText,
-  cardNumberText,
   cardNumberPlaceholder,
-  secretNumberText,
-  secretNumberPlaceholder,
-  createAccount,
-  safeInformation,
-  itsFine,
-  createdCorrectly,
-  closeText,
-  goNuwe,
+  cardNumberText,
   cardNumberTextError,
+  closeText,
+  createAccount,
+  createdCorrectly,
+  goNuwe,
+  itsFine,
+  paymentDetailsText,
+  paymentDetailsTitle,
+  safeInformation,
+  secretNumberPlaceholder,
+  secretNumberText,
   secretNumberTextError,
+  step,
+  verificationCard,
 } = constants;
 
 function PaymentDetails() {
