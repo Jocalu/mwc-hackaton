@@ -89,8 +89,8 @@ function PaymentDetails() {
             className="button button--green button--mt"
             type="button"
             disabled={
-              secretNumber.valid.toString() !== 'checked'
-            || cardNumber.valid.toString() !== 'checked'
+              secretNumber.valid !== 'checked'
+            || cardNumber.valid !== 'checked'
             }
             onClick={() => setOpen(true)}
           >

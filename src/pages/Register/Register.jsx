@@ -104,9 +104,9 @@ function Register() {
         <Link style={{ textDecoration: 'none', color: 'inherit' }} to="/profile">
           <button
             disabled={
-              name.valid.toString() !== 'checked'
-            || email.valid.toString() !== 'checked'
-            || password.valid.toString() !== 'checked'
+              name.valid !== 'checked'
+            || email.valid !== 'checked'
+            || password.valid !== 'checked'
             }
             className="button button--green"
             type="button"

@@ -26,7 +26,7 @@ const {
 
 function Profile() {
   const unchecked = 'unchecked';
-  const [phoneNumber, setPhoneNumber] = useState({ inputField: '', valid: false });
+  const [phoneNumber, setPhoneNumber] = useState({ inputField: '', valid: unchecked });
   const [address, setAddress] = useState({ inputField: '', valid: unchecked });
   const [country, setCountry] = useState({ inputField: '', valid: unchecked });
 
@@ -91,9 +91,9 @@ function Profile() {
             className="button button--green button--mt"
             type="button"
             disabled={
-              phoneNumber.valid.toString() !== 'checked'
-            || address.valid.toString() !== 'checked'
-            || country.valid.toString() !== 'checked'
+              phoneNumber.valid !== 'checked'
+            || address.valid !== 'checked'
+            || country.valid !== 'checked'
             }
           >
             {save}
